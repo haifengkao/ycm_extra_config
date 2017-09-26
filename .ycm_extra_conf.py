@@ -27,7 +27,7 @@ def findProjectName(working_directory):
 flags = [
 # TODO: find the correct cache path automatically
 '-D__IPHONE_OS_VERSION_MIN_REQUIRED=80000',
-'-miphoneos-version-min=9.3',
+# '-miphoneos-version-min=9.3',
 '-arch', 'arm64',
 '-fblocks',
 '-fmodules',
