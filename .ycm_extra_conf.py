@@ -27,7 +27,6 @@ def findProjectName(working_directory):
 flags = [
 # TODO: find the correct cache path automatically
 '-D__IPHONE_OS_VERSION_MIN_REQUIRED=80000',
-# '-miphoneos-version-min=9.3',
 '-arch', 'arm64',
 '-fblocks',
 '-fmodules',
@@ -38,13 +37,6 @@ flags = [
 '-isystem',
 '/Library/Developer/CommandLineTools/usr/include/c++/v1', # for c++ headers <string>, <iostream> definition
 '-x',
-'objective-c',
-# '-F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks',
-# '-F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks',
-# '-I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers',
-# '-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
-# '-isystem', '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1'
-# '-I/Library/Developer/CommandLineTools/usr/include',
 'objective-c++',
 #custom definition, include subfolders
 '-ProductFrameworkInclude', # include the framework in the products(in derivedData) folder
@@ -53,13 +45,11 @@ flags = [
 '-ISUB./'+findProjectName(DirectoryOfThisScript()), # new cocoapods directory
 # use headers in framework instead
 #'-ISUB./Example/Pods', # new cocoapods directory
-# '-F/Users/Lono/Library/Developer/Xcode/DerivedData/Scrapio-dliwlpgcvwijijcdxarawwtrfuuh/Build/Products/Debug-iphonesimulator/Kiwi/',
 # '-include',
 # './Example/Tests/Tests-Prefix.pch', # test project prefix header
 '-isysroot', '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk'
 # '-fencode-extended-block-signature',  #libclang may report error on this
 
-# '-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.2/include', # let IncludeClangInXCToolChain handle it
 # include-pch will make YouCompleteMe show 'no errors founded'
 # '-include-pch',
 # './Example/Tests/Tests-Prefix.pch', # test project prefix header
@@ -67,7 +57,6 @@ flags = [
 # modules failed trials
 # '-fmodule-implementation-of',
 # '-fimplicit-module-maps',
-# '-F/Users/Lono/Library/Developer/Xcode/DerivedData/Scrapio-dliwlpgcvwijijcdxarawwtrfuuh/Build/Products/Debug-iphonesimulator/CocoaLumberjack',
 # '-Wnon-modular-include-in-framework-module',
 ]
 
