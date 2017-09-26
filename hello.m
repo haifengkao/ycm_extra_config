@@ -3,6 +3,7 @@
 //  libclangtest
 //
 
+#include <iostream>
 @import Foundation;
 @interface hello : NSObject
 
