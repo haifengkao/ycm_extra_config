@@ -31,6 +31,7 @@ flags = [
 '-arch', 'arm64',
 '-fblocks',
 '-fmodules',
+'-fcxx-modules',
 '-fobjc-arc',
 '-fobjc-exceptions',
 '-fexceptions',
@@ -44,6 +45,7 @@ flags = [
 # '-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
 # '-isystem', '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1'
 # '-I/Library/Developer/CommandLineTools/usr/include',
+'objective-c++',
 #custom definition, include subfolders
 '-ProductFrameworkInclude', # include the framework in the products(in derivedData) folder
 '-I./Example/'+findProjectName(DirectoryOfThisScript()), # new cocoapods directory
